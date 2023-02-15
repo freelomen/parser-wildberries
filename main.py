@@ -1,6 +1,9 @@
+import asyncio
 import json
 import os
 import time
+
+import aiohttp
 from bs4 import BeautifulSoup
 from selenium import webdriver
 from selenium.common import NoSuchElementException
@@ -196,7 +199,7 @@ def main():
     # Выдергиваем ссылки карточек товаров
     get_item_url()
 
-    # Просматриваем карточки товаров
+    # Сохраняем страницы товаров
     get_item_page()
 
     # Получаем данные товаров
